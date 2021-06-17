@@ -1,4 +1,2 @@
 import methods from "./methods"
-export default {
-    methods
-}
+export default methods

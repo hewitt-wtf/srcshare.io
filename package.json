@@ -1,7 +1,7 @@
 {
   "name": "@hk223/srcshare.io",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.4",
+  "description": "Unofficial API Wrapper for srcshare.io",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
