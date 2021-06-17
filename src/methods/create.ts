@@ -14,14 +14,7 @@ export default async (file: Code) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(file)
     }).catch((err) => {
-        throw new CreateError(err.message)
+        throw new Error(err.message)
     })
     return await res.json()
-}
-
-class CreateError extends Error {
-    constructor(message: string) {
-        super(message);
-        this.name = 'CreateError';
-    }
 }
