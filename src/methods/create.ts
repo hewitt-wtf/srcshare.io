@@ -9,6 +9,9 @@ type Code = {
 }
 
 export default async (file: Code) => {
+    if (file.language && file.language === "html")
+        file.language = "html/xml";
+        
     let res = await fetch("https://api.srcshare.io/code", {
         method: "POST",
         headers: {"Content-Type": "application/json"},

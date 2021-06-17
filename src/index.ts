@@ -1,5 +1,6 @@
-import create from "./methods/create"
-import get from "./methods/get"
+import get from "./methods/get";
+import create from "./methods/create";
+import languages from "./utils/languages";
 
-export {create, get}
+export {create, get, languages}
 
