@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+import fetch from "node-fetch";
 
 type Code = {
     code: string,
@@ -14,7 +14,9 @@ export default async (file: Code) => {
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(file)
     }).catch((err) => {
-        throw new Error(err.message)
-    })
-    return await res.json()
+        throw new Error(err.message);
+    });
+    
+    const id = await res.json();
+    return { url: `https://srcshare.io/?id=${id}`, id };
 }
