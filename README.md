@@ -36,7 +36,7 @@ npm i @hk223/srcshare.io
 # FAQ
 
 - Can I add a language when posting?
-    - No, at least, not yet... I have the language option currently, because it may be possible in the future
+    - Done
 
 # Support
 
