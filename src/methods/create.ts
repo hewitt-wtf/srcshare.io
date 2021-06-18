@@ -11,7 +11,7 @@ type Code = {
 
 export default async (file: Code) => {
     let uri = "https://api.srcshare.io/code";
-
+    if(file.code) throw new Error("You need to give some code to upload first!")
     if (file.language && file.language === "html")
         file.language = "html/xml";
 
