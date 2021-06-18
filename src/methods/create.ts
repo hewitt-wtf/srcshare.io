@@ -14,19 +14,19 @@ export default async (file: Code) => {
 
     if (file.language && file.language === "html")
         file.language = "html/xml";
-    
+
     if (file.language)
         uri = addParam(uri, "language", file.language);
-    
+
     if (file.title)
         uri = addParam(uri, "title", file.title);
-    
+
     if (file.description)
         uri = addParam(uri, "description", file.description);
-        
-    let res = await fetch("uri", {
+
+    let res = await fetch(uri, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             code: file.code,
             error: file.error
@@ -34,7 +34,7 @@ export default async (file: Code) => {
     }).catch((err) => {
         throw new Error(err.message);
     });
-    
+
     const id = await res.json();
     return { url: `https://srcshare.io/?id=${id}`, id };
 }
