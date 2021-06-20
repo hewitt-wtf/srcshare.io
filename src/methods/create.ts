@@ -11,7 +11,8 @@ type Code = {
 
 export default async (file: Code) => {
     let uri = "https://api.srcshare.io/code";
-    
+    if(!file)
+        throw new Error("You have to pass in an object!")
     if(!file.code) 
         throw new Error("You need to give some code to upload first!");
     
