@@ -1,4 +1,4 @@
-const languages: string[] = [
+export default [
     "coffeescript",
     "css",
     "d",
@@ -37,6 +37,4 @@ const languages: string[] = [
     "xquery",
     "yaml",
     "yaml-frontmatter",
-];
-
-export default languages;
+] as const;
