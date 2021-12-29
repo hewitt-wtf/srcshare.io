@@ -18,7 +18,7 @@ const bin = await srcshare.create({
     title: "my code",
     description: "my code here is the best code",
 });
-console.log(`Code can be found here: https://srcshare.io/?id=${bin}`);
+console.log(`Code can be found here: ${bin.url}`);
 ```
 
 # Getting a Bin
